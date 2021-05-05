@@ -1,22 +1,43 @@
-pipeline {
+pipeline
+{
     agent any
-
-    stages {
-        stage('Validate') {
-            steps {
-                echo 'Validate Code'
-                sh 'mvn compile'
+    
+    stages{
+        stage('Continous download')
+        {
+            steps
+            {
+                git 'https://github.com/gopireddy0194/test.git'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
+	stage('Validate')
+	{
+		steps
+		{
+		   sh label: '', script: 'mvn validate'
+		}
+	}
+        stage('compile')
+        {
+            steps
+            {
+              sh label: '', script: 'mvn compile'  
+            }
+            
+        }
+        stage('test')
+        {
+            steps
+            {
+                sh label: '', script: 'mvn test'
             }
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+        stage('final')
+        {
+            steps
+            {
+                echo " compiled and tested successfully"
             }
         }
     }
-}
+} 
