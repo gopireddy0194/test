@@ -17,7 +17,7 @@ pipeline
 		   sh label: '', script: 'mvn validate'
 		}
 	}
-        stage('compile')
+        stage('compile-again')
         {
             steps
             {
