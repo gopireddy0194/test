@@ -38,7 +38,7 @@ pipeline
             {
 		sh label: '', script: 'mvn package'
 
-                echo " This change is done in dev branch"
+                echo " This change is done in dev branch - A"
             }
         }
     }
