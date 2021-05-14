@@ -3,7 +3,7 @@ pipeline
     agent any
     
     stages{
-        stage('Continous download')
+        stage('Continous download1')
         {
             steps
             {
@@ -37,6 +37,7 @@ pipeline
             steps
             {
 		sh label: '', script: 'mvn package'
+
                 echo " compiled and tested and packaged successfully using webhook8"
             }
         }
