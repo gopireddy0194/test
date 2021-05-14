@@ -38,7 +38,7 @@ pipeline
             {
 		sh label: '', script: 'mvn package'
 
-                echo " compiled and tested and packaged successfully using webhook8"
+                echo " This change is done in dev branch"
             }
         }
     }
