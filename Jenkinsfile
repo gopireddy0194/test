@@ -36,7 +36,8 @@ pipeline
         {
             steps
             {
-                echo " compiled and tested successfully using webhook1s"
+		sh label: '', script: 'mvn package'
+                echo " compiled and tested and packaged successfully using webhook2"
             }
         }
     }
