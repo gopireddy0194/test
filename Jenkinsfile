@@ -37,7 +37,7 @@ pipeline
             steps
             {
 		sh label: '', script: 'mvn package'
-                echo " compiled and tested and packaged successfully using webhook5"
+                echo " compiled and tested and packaged successfully using webhook6"
             }
         }
     }
