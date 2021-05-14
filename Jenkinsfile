@@ -36,7 +36,7 @@ pipeline
         {
             steps
             {
-                echo " compiled and tested successfully using webhooks"
+                echo " compiled and tested successfully using webhook1s"
             }
         }
     }
